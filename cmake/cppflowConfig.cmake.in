@@ -1,4 +1,6 @@
-get_filename_component(cppflow_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+get_filename_component(cppflow_BASE_DIR "${CMAKE_CURRENT_LIST_FILE}" DIRECTORY)
+set(cppflow_CMAKE_DIR "${cppflow_BASE_DIR}/lib/cppflow/cmake")
+set(cppflow_INCLUDE_DIR "${cppflow_BASE_DIR}/include")
 
 if(NOT TARGET cppflow::cppflow)
   set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${cppflow_CMAKE_DIR}/modules")
